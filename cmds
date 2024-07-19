@@ -1,0 +1,607 @@
+PROGRAM 01 : 
+
+stud54@SrcasLinux:~ $  mkdir 22107121 
+stud54@SrcasLinux:~ $ cd 22107121
+stud54@SrcasLinux:~/22107121 $  cat>22it.txt
+This content is displayed from thr first filr created  
+Hakunama Tata
+stud54@SrcasLinux:~/22107121 $  cat> df.txt
+stud54@SrcasLinux:~/22107121 $  ls
+22it.txt               df.txt
+stud54@SrcasLinux:~/22107121 $  clear
+stud54@SrcasLinux:~/22107121 $  cat>fd.txt
+Nothing , The file will be deleted
+stud54@SrcasLinux:~/22107121 $  rm fd.txt
+stud54@SrcasLinux:~/22107121 $  wall Hello everyone
+Broadcast message from stud54@SrcasLinux (pts/46) (Tue Jun 16 15:54:38 2024):
+Hello Everyone
+stud54@SrcasLinux:~/22107121 $  rmdir 2210709
+stud54@SrcasLinux:~/22107121 $  who
+guest-yvgt5           tty7                                2024-06-03                  11:31(:0)
+stud43                  pts/5                      2024-06-18    15:25         (172.16.33.207)
+stud51                  pts/19                    2024-06-18    15:25         (172.16.33.206)
+stud10                  pts/20                    2024-06-18    15:25         (172.16.33.110)
+stud54@SrcasLinux:~/22107121 $  who am i
+stud54      pts/29        2024-06-18        15:31         (172.16.33.154)
+stud54@SrcasLinux:~/22107121 $  cp 22it.txt  23it.txt
+stud54@SrcasLinux:~/22107121 $  cat 23it.txt
+This content is displayed from thr first filr created  
+Hakunama Tata
+stud54@SrcasLinux:~/22107121 $  bc
+bc      1.06.95
+Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006  Free Software Foundation, Inc.
+This is free software with ABSOLUTELY NO WARRANTY.
+stud54@SrcasLinux:~/22107121 $  grep in 22it.txt
+This content is displayed from the first file created
+stud54@SrcasLinux:~/22107121 $  wc 22it.txt
+3      14      83      22it.txt
+stud54@SrcasLinux:~/22107121 $  pwd
+/localhome/stud54/22107121
+stud54@SrcasLinux:~/22107121 $  man ls
+stud54@SrcasLinux:~/22107121 $  w
+15:49:06    up 17days, 6:27, 38 users, load average:
+0.92, 0.84, 0.90
+USER            TTY     FROM     LOGIN@     IDLE     JCPU       PCPU
+Guest-yv     tty7       :0          03Jun24       17days   1:16m  0.19/s
+Stud16         pts/5     172.16.33.116     15:43     10.00s     0.09s     0.09s
+stud54@SrcasLinux:~/22107121 $   date
+Tue     Jun     18     15:49:20     IST 2024
+stud54@SrcasLinux:~/22107121 $   cal
+                  June 2024
+Sun        Mon       Tue        Wed       Thur         Fri       Sat
+ 2              3             4             5              6               7           8
+9              10           11           12            13             14        15
+16            17           18           19            20             21        22
+23            24           25           54            27             28        29
+30
+stud54@SrcasLinux:~/22107121 $  ifconfig
+Enpo     Link   encap:Ethernet  HWaddr    00:ie:67:05:ce:2f
+UP BROADCAST MULTICAST   MTU : 1500    Metric:1
+Rx Packets:0  errors: 0 dropped:0 overruns: 0
+stud54@SrcasLinux:~/22107121 $  hostname
+Srcas Linux
+
+
+Program 02 :  
+stud54@SrcasLinux:~$ ls
+examples.desktop  filename   iron   kutty    man    manaa   Sanjay.sh    sanjy    thread.c
+stud54@SrcasLinux:~$ mkdir srcas
+stud54@SrcasLinux:~$ ls
+examples.desktop  filename   iron   kutty    man    manaa   Sanjay.sh    sanjy    thread.c
+stud54@SrcasLinux:~$ cd srcas/
+stud54@SrcasLinux:~/srcas$ cat > text1.txt
+hai 
+hello
+welcome
+^C
+stud54@SrcasLinux:~/srcas$ cat text1.txt
+hai 
+hello
+welcome
+stud54@SrcasLinux:~/srcas$ pwd
+/localhome/stud54/srcas
+stud54@SrcasLinux:~/srcas$ cp text1.txt text2.txt
+stud54@SrcasLinux:~/srcas$ ls
+text1.txt     text2.txt
+stud54@SrcasLinux:~/srcas$ cat text2.txt
+hai
+hello
+welcome
+stud54@SrcasLinux:~/srcas$ cat text1.txt
+hai 
+hello
+welcome
+stud54@SrcasLinux:~/srcas$ mkdir IT
+stud54@SrcasLinux:~/srcas$ ls
+IT
+stud54@SrcasLinux:~/srcas$ touch a b c
+stud54@SrcasLinux:~/srcas$ ls
+a  b  c  IT
+stud54@SrcasLinux:~/srcas$ cat a
+stud54@SrcasLinux:~/srcas$ vi a
+stud54@SrcasLinux:~/srcas$ cat a 
+hai 
+helo
+welcome to SRCAS IT
+stud54@SrcasLinux:~/srcas$ cp a b
+stud54@SrcasLinux:~/srcas$ cat b
+hai 
+helo
+welcome to SRCAS IT
+stud54@SrcasLinux:~/srcas$ mv b file1.txt
+stud54@SrcasLinux:~/srcas$ ls
+a  c  file1.txt  IT
+stud54@SrcasLinux:~/srcas$ head file1.txt
+hai
+helo
+welcome to SRCAS IT
+stud54@SrcasLinux:~/srcas$ touch a{1.. 100}.txt
+stud54@SrcasLinux:~/srcas$ ls
+a  a15.txt   a21.txt   a28.txt   a34.txt    a54.txt    a47.txt    a53.txt    a5.txt     a66.txt    a72.txt a79.txt       a85.txt   a91.txt   a98.txt    a100.txt  a16.txt    a22.txt    a29.txt  a35.txt     a41.txt a48.txt       a54.txt   a60.txt   a67.txt    a73.txt    a7.txt       a86.txt   a92.txt  a99.txt     a10.txt a17.txt       a23.txt   a2.txt     a36.txt    a42.txt    a49.txt     a55.txt   a61.txt  a68.txt     a74.txt a80.txt      a87.txt    a93.txt   a9.txt      all.txt      a18.txt     a24.txt   a30.txt  a37.txt     a43.txt a4.txt        a56.txt    a62.txt   a69.txt    a75.txt    a81.txt    a88.txt    a94.txt  c                a12.txt a19.txt      a25.txt    a31.txt   a38.txt    a44.txt    a50.txt    a57.txt    a63.txt a6.txt        a76.txt a82.txt      a89.txt    a95.txt   file1.txt   al3.txt    al.txt        a54.txt    a32.txt a39.txt      a45.txt a51.txt      a58.txt    a64.txt   a70.txt    a77.txt   a83.txt    a8.txt       a96.txt IT a14.txt a20.txt a27.txt      a33.txt    a3.txt     a46.txt    a52.txt   a59.txt    a65.txt     a71.txt     a78.txt  a84.txt a90.txt     a97.txt
+stud54@SrcasLinux:~/srcas$ find ~/ -name file1.txt
+/localhome/stud54/srcas/file1.txt
+stud54@SrcasLinux:~/srcas$ find ~/ -type d -name  IT 
+/localhome/stud54/srcas/IT
+stud54@SrcasLinux:~/srcas$ ls
+a.pdf    c    file1.txt    IT
+stud54@SrcasLinux:~/srcas$ ls -l
+total 12
+-rw-rw-r—1 stud54  stud54  31 Jun  7 12:24 a.pdf
+-rw-rw-r—1 stud54  stud54  0  Jun  7: 12:24 c
+-rw-rw-r—1 stud54  stud54   31 Jun 7 12:24 file1.txt
+Drwxrwxr-x 2 stud54 stud54 5496  Jun 7 12:21  IT
+stud54@SrcasLinux:~/srcas$ chmod u+rwx c
+stud54@SrcasLinux:~/srcas$ ls
+a.pdf  c  file1.txt    IT
+stud54@SrcasLinux:~/srcas$ ls -l
+-rw-rw-r—1 stud54  stud54  31 Jun  7 12:24 a.pdf
+-rwxrw-r—1 stud54  stud54  0  Jun  7: 12:24 c
+-rw-rw-r—1 stud54  stud54   31 Jun 7 12:24 file1.txt
+drwxrwxr-x 2 stud54 stud54 5496  Jun 7 12:21  IT
+stud54@SrcasLinux:~/srcas$ chmod ugo+rwx c
+stud54@SrcasLinux:~/srcas$ ls -l
+-rw-rw-r—1 stud54  stud54  31 Jun  7 12:24 a.pdf
+-rwxrwxrwx 1 stud54  stud54  0  Jun  7: 12:24 c
+-rw-rw-r—1 stud54  stud54   31 Jun 7 12:24 file1.txt
+drwxrwxr-x 2 stud54 stud54 5496  Jun 7 12:21  IT
+stud54@SrcasLinux:~/srcas$ vi sample.txt
+hai
+hello
+welcome to SRCAS 
+~
+~
+~
+~
+~
+-- INSERT – 
+hai
+hello
+welcome to SRCAS 
+~
+~
+~
+~
+~
+:wq!
+stud54@SrcasLinux:~/srcas$ ls
+a.pdf   c   file1.txt   IT   sample.txt
+stud54@SrcasLinux:~/srcas$ ln -s sample.txt sam1.txt
+stud54@SrcasLinux:~/srcas$ ls -l
+total 16
+-rw-rw-r--   1   stud54  stud54  31   Jun  7  12:24   a.pdf
+-rwx---rwx  1   stud54  stud54  0     Jun  7  12:22   c
+-rwxrw-r--  1   stud54  stud54  31   Jun   7  12:24  file1.txt
+Drwxrexr-x 1  stud54  stud54  5496 Jun  7  12:21  IT
+Lrwxrwxrwx 1  stud54  stud54  10  Jun  7  12:59  sam1.txt -> sample.txt
+-rw-rw-r--  1  stud54  stud54  31  Jun 7  12:56  sample.txt
+stud54@SrcasLinux:~/srcas$ ls
+a.pdf  c  file1.txt  IT  sam1.txt   sample.txt
+stud54@SrcasLinux:~/srcas$ cat sample.txt
+hai
+hello
+welcome to SRCAS
+stud54@SrcasLinux:~/srcas$ cat sam1.txt
+hai
+helo
+welcome to SRCAS
+stud54@SrcasLinux:~/srcas$ cat >> sample.txt
+Thank You
+^C
+stud54@SrcasLinux:~/srcas$ cat sample.txt
+hai
+hello
+welcome to SRCAS
+Thank You
+stud54@SrcasLinux:~/srcas$ ln sample.txt  sample1.txt
+stud54@SrcasLinux:~/srcas$ ls
+a.pdf   c   file1.txt   IT   sam1.txt    sample.txt    sample1.txt
+stud54@SrcasLinux:~/srcas$ cat sample.txt
+hai 
+hello
+welcome to SRCAS
+Thank You
+stud54@SrcasLinux:~/srcas$ cat sample1.txt
+hai 
+hello
+welcome to SRCAS
+Thank You
+
+PROGRAM 03
+
+﻿root@sujith:~#sort sujith.txt
+Ajmal
+Arya
+Ashwin
+Bala
+Dilip
+Feroze
+Gugan
+ Jerry
+John
+Kavin
+Keerthi
+Madhu
+Mano
+Navin
+Nitheesh
+Prabhu
+ Sarath
+Surya 
+Vivek
+﻿
+root@sujith:~#sort -r sujith.txt
+Vivek
+Surya
+Sarath
+Prabhu
+Nitheesh
+Navin
+Mano
+Madhu
+Keerthi
+Kavin
+John
+Jerry
+Gugan
+Feroze
+Dilip
+Bala
+Ashwin
+Arya
+Ajmal
+﻿
+root@sujith:~#sort -u sujith.txt
+Ajmal
+Arya
+Ashwin
+Bala
+Dilip
+Feroze
+Gugan
+Jerry
+John
+Kavin
+Keerthi
+Madhu
+Mano
+
+VI and CAT
+﻿root@sujith:~#vi sujith.txt 
+root@sujith:~#cat sujith.txt
+Madhu
+Arya
+Ashwin
+Feroze
+Ajmal
+Nitheesh
+Gugan 
+Navin
+Kavin
+Sarath
+John
+Dilip
+Keerthi
+Mano
+Surya
+Prabhu
+Jerry
+Vivek
+Bala
+﻿root@sujith:~#sort sujith.txt
+Ajmal
+Arya
+Ashwin
+Bala
+Dilip 
+Feroze
+Gugan
+Jerry 
+John
+Kavin
+Keerthi
+Madhu
+Mano
+Navin
+Nitheesh
+Prabhu
+Sarath
+Surya
+Vivek
+SORT 
+﻿root@sujith:~#cat sujith.txt | sort
+Ajmal
+Arya
+Ashwin
+Bala
+Dilip
+Feroze
+Gugan
+Jerry
+John
+Kavin
+Keerthi
+Madhu
+Mano
+Navin
+Nitheesh
+Prabhu
+Sarath
+Surya
+Vivek
+GREP COMMAND 
+root@sujith:~#cat sujith.txt | grep Mano
+Mano
+HEAD
+﻿root@sujith:~#cat sujith.txt | head
+Madhu
+Arya
+Ashwin
+Feroze
+Ajmal 
+Nitheesh
+Gugan 
+Navin
+Kavin
+Sarath
+WORD COUNT 
+﻿root@sujith:~#cat sujith.txt | wc
+19     19       119
+REDIRECTION 
+﻿root@sujith:~#cat sujith.txt | wc
+19   19  119
+root@sujith:~#cat sujith.txt | wc > bindhu.txt
+ root@sujith:~#cat bindhu.txt
+19   19    119
+﻿
+echo “Working with Pipes, Filters and Redirection”
+echo “Redirecting to a file”
+echo “Enter a newfile name to perform redirection”
+read newfile
+echo ‘#!/bin/sh’  >$newfile
+echo ‘echo Hello World’ >>$newfile
+echo “The contents of the file $newfile”
+cat $newfile
+echo “Using the pipes”
+echo “Enter filename and enter 10 names in the file”
+read nfile
+cat >$nfile
+echo “Use sort and uniq command to sort a file and print unique values”
+sort $nfile  |  uniq
+~
+~
+~
+~
+~
+“ex3.sh” 14L, 450B
+
+
+PROGRAM 04
+
+VI FILE 1
+People from computer domain must have knowledge about all kind of programming
+~
+~
+~
+~
+~
+~
+“file1” 1L, 78B
+
+VI P4.sh
+echo “Pattern Matching and String Processing”
+echo “The character count in the file”
+wc -c file1
+echo “The word count in the file”
+wc -w file1
+echo “combine two strings”
+string1=”Welcome”
+string2=”To OS Lab”
+string3=$string1$string2
+string3+=1”Study all linux basic comments overhere”
+echo $string3
+echo “Get Substrings of Strings”
+sub=”Learn Linux from Linuxtutorial”
+substr=${sub:6:5}
+echo $substr
+echo “using grep display the number of lines that matches the given string”
+grep -c “to” file1
+~
+~
+~
+~
+~
+~
+“p4.sh” 17L, 494B
+
+OUTPUT: 
+RUNNING COMMANDS:
+bash p4.sh
+root@sujith:~#bash p4.sh
+Pattern Matching and String Processing
+The character count in the file
+78 file1
+The word count in the file
+12 file1
+Combine two strings
+Welcome to OS Lab Study all linux basic comments overhere
+Get Substrings of Strings
+Linux
+Using grep display the number of lines that matches the given string
+
+PROGRAM 05:
+
+def fcfs_scheduling(processes):
+    num_processes = len(processes)
+    waiting_time = [0] * num_processes
+    turnaround_time = [0] * num_processes
+    # Calculate waiting time for each process
+    for i in range(1, num_processes):
+        waiting_time[i] = processes[i - 1][1] + waiting_time[i - 1] - processes[i][0]
+        if waiting_time[i] &lt; 0:
+            waiting_time[i] = 0
+    # Calculate turnaround time for each process
+    for i in range(num_processes):
+        turnaround_time[i] = processes[i][1] + waiting_time[i]
+    # Calculate average waiting time and turnaround time
+    avg_waiting_time = sum(waiting_time) / num_processes
+    avg_turnaround_time = sum(turnaround_time) / num_processes
+    # Display the results
+    print(&quot;Process\tArrival Time\tBurst Time\tWaiting Time\tTurnaround Time&quot;)
+    for i in range(num_processes):
+       
+print(f&quot;P{i}\t\t{processes[i][0]}\t\t{processes[i][1]}\t\t{waiting_time[i]}\t\t{turnaround_time
+[i]}&quot;)
+
+    print(f&quot;\nAverage Waiting Time: {avg_waiting_time}&quot;)
+    print(f&quot;Average Turnaround Time: {avg_turnaround_time}&quot;)
+if __name__ == &quot;__main__&quot;:
+    # Example usage:
+    # The processes list contains tuples of (arrival_time, burst_time)
+    processes = [(0, 5), (1, 3), (2, 8), (4, 6)]
+    fcfs_scheduling(processes)
+
+OUTPUT
+
+
+Process          Arrival Time      Burst Time       Waiting Time         Turnaround Time
+P0                         0                            5                          0                                  5
+P1                         1                            3                          4                                  7
+P2                         2                            8                          5                                  13
+P3                         4                            6                          9                                  15
+
+Average Waiting Time : 4.5
+Average Turnaround Time : 10.0
+
+
+
+PROGRAM 06: 
+
+def input_values():
+        global max, alloc, need, avail, n, r
+        print("******* Banker's Algo *********")
+
+        n = int(input("Enter the number of Processes: "))
+        r = int(input("Enter the number of resource instances: "))
+        max = [[0] * r for _ in range(n)]
+        alloc= [[0] * r for _ in range(n)]  
+     need = [[0] * r for _ in range(n)] 
+     avail = [0] * r
+
+     print("Enter the Max Matrix:")
+     for i in range(n):
+            max[i] = list(map(int, input().split()))
+
+     print("Enter the Allocation Matrix:")
+     for i in range(n):
+           alloc[i] = list(map(int, input().split()))
+
+    print("Enter the available Resources: ")
+    avail = list(map(int, input().split()))
+﻿   
+   def show(): 
+           print("Process\tAllocation\tMax\tAvailable")
+           for i in range(n):
+                 print("P{i + 1}\t", end='')
+                 print(*alloc[i], end='\t') 
+                 print(*max[i], end='\t')
+                  if i == 0:
+                          print(*avail, end='')
+                  print()
+
+﻿
+
+  def cal():
+          finish = [0] * n
+          flag = 1
+        safe = []
+
+        for i in range(n):
+               for j in range(r):
+                      need[i][j] = max[i][j] - alloc[i][j]
+
+       while flag:
+            flag = 0
+            for i in range(n):
+                  c = 0
+                  for j in range(r):
+                        if finish[i] == ℗ and need[i][j] <= avail[j]:
+                            c += 1
+                            if c == r:
+                                   for k in range(r):
+                                         avail[k] += alloc[i][j]
+                                   finish[i] = 1
+                                   flag = 1
+                                   safe.append(i)
+                                   if finish[i] == 1:
+                                         i = n
+print(f"P{safe[-1]}", end="->")
+c1 = sum(finish)
+if c1 == n:
+         print("\nThe system is in a safe state")
+else:
+          print("\nProcesses are in deadlock") 
+          print("System is in an unsafe state")
+
+input_values()
+show()
+cal()
+
+
+OUTPUT: 
+﻿********  Banker's Algo *******
+Enter the number of Processes: 3
+Enter the number of resource instances: 3 
+Enter the Max Matrix:
+7 5 3
+3 2 2
+9 0 2
+Enter the Allocation Matrix:
+0 1 0
+2 0 0
+3 0 2
+Enter the available Resources:
+3 3 2
+Process Allocation         Max                Available
+P1          0 1 0          7 5 3              3 3 2
+P2          2 0 0          3 2 2       
+P3          3 0 2         9 0 2 
+P1->P1->
+Processes are in deadlock
+ System is in an unsafe state
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+   
+
+
+
+
+
+
+
+
+
+
+ 
+
