@@ -1,0 +1,293 @@
+PROGRAM 06: 
+def input_values():
+        global max, alloc, need, avail, n, r
+        print("******* Banker's Algo *********")
+        n = int(input("Enter the number of Processes: "))
+        r = int(input("Enter the number of resource instances: "))
+        max = [[0] * r for _ in range(n)]
+        alloc= [[0] * r for _ in range(n)]  
+     need = [[0] * r for _ in range(n)] 
+     avail = [0] * r
+     print("Enter the Max Matrix:")
+     for i in range(n):
+            max[i] = list(map(int, input().split()))
+     print("Enter the Allocation Matrix:")
+     for i in range(n):
+           alloc[i] = list(map(int, input().split()))
+    print("Enter the available Resources: ")
+    avail = list(map(int, input().split()))
+   def show(): 
+           print("Process\tAllocation\tMax\tAvailable")
+           for i in range(n):
+                 print("P{i + 1}\t", end='')
+                 print(*alloc[i], end='\t') 
+                 print(*max[i], end='\t')
+                  if i == 0:
+                          print(*avail, end='')
+                  print()
+  def cal():
+          finish = [0] * n
+          flag = 1
+        safe = []
+        for i in range(n):
+               for j in range(r):
+                      need[i][j] = max[i][j] - alloc[i][j]
+       while flag:
+            flag = 0
+            for i in range(n):
+                  c = 0
+                  for j in range(r):
+                        if finish[i] == ℗ and need[i][j] <= avail[j]:
+                            c += 1
+                            if c == r:
+                                   for k in range(r):
+                                         avail[k] += alloc[i][j]
+                                   finish[i] = 1
+                                   flag = 1
+                                   safe.append(i)
+                                   if finish[i] == 1:
+                                         i = n
+print(f"P{safe[-1]}", end="->")
+c1 = sum(finish)
+if c1 == n:
+         print("\nThe system is in a safe state")
+else:
+          print("\nProcesses are in deadlock") 
+          print("System is in an unsafe state")
+input_values()
+show()
+cal()
+
+OUTPUT: 
+﻿********  Banker's Algo *******
+Enter the number of Processes: 3
+Enter the number of resource instances: 3 
+Enter the Max Matrix:
+7 5 3
+3 2 2
+9 0 2
+Enter the Allocation Matrix:
+0 1 0
+2 0 0
+3 0 2
+Enter the available Resources:
+3 3 2
+Process Allocation         Max                Available
+P1          0 1 0          7 5 3              3 3 2
+P2          2 0 0          3 2 2       
+P3          3 0 2         9 0 2 
+P1->P1->
+Processes are in deadlock
+ System is in an unsafe state
+
+
+7.MEMORY ALLOCATION ALGORITHM
+
+Program
+#Memory Allocation Algorithm
+def ff(bsize, m, psize, n):
+alloc = [-1] * n
+
+for i in range(n):
+for j in range(m):
+      		if bsize[j] >= psize[i]:
+        			alloc[i] = j
+        			bsize[j] -= psize[i]
+       			break
+
+  	print("Process No. process Size Block no.")
+  	for i in range(n):
+    		print(" ", i+1, "   ", psize[i],"   ", end=" ")
+    		if alloc[i] ! = -1:
+      			print(alloc[i]+1)
+    		else:
+      			print("Not Allocated")
+
+if __name__ == "__main__":
+  	m = int(input("Enter the number of memory blocks:"))
+  	bsize = []
+  	for i in range(m):
+    		size = int(input(f"Enter size of memory block {i+1}: "))
+    		bsize.append(size)
+
+
+  	n = int(input("Enter the number of processes:"))
+  	psize = []
+  	for i in range(n):
+    		size = int(input(f"Enter size of process {i+1}:"))
+    		psize.append(size)
+
+  	ff(bsize, m, psize, n)
+
+Output
+
+Enter the number of memory blocks:	3
+Enter size of memory block 1: 	200
+Enter size of memory block 2:	 500
+Enter size of memory block 3: 	450
+Enter the number of processes:	4
+Enter size of process 1:		220
+Enter size of process 2:		115
+Enter size of process 3:		300
+Enter size of process 4:		500
+Process No. process Size Block no.
+  1     220     2
+  2     115     1
+  3     300     3
+  4     500     Not Allocated
+
+
+8.PAGE REPLACEMENT ALGORITHM
+Program
+#page replacement algorithm
+def main():
+    n = int(input("Enter the number of pages: "))
+    a = list(map(int, input("Enter the page numbers: ").split()))
+    no = int(input("Enter the number of frames: "))
+    
+    frame = [-1] * no
+    j = 0  
+    count = 0  
+
+    print("\t Ref string \t page frames")
+    for i in range(n):
+        print(f"{a[i]}\t", end = " ")
+        avail = False
+
+     for k in range(no):
+if frame[k] == a[i]:
+avail = True
+break
+
+      if not avail:
+frame[j] = a[i]
+j = (j + 1) % no  
+count += 1
+
+
+
+        for k in range(no):
+            	if frame[k] != -1:
+                		print(f"{frame[k]}\t", end = " ")
+            	else:
+                		print("-\t", end = " ")
+        print()  
+    print(f'Page fault: {count}')
+
+if __name__ == "__main__":
+    main()
+
+Output
+Enter the number of pages: 7
+Enter the page numbers: 1 2 4 3 5 2 4
+Enter the number of frames: 3
+	 Ref string 	 page frames
+1	 1	-1	-1	 
+2	 1	 2	-1	 
+4	 1	 2	 4	 
+3	 3	 2	 4	 
+5	 3	 5	 4	 
+2	 3	 5	 2	 
+4	 4	 5	 2	 
+Page fault: 7
+
+9.DISK SCHEDULING ALGORITHM
+Program
+#disk scheduling algorithm
+def main():
+  	queue = []
+  	n = int(input("Enter the max range of disk: "))
+ 	size = int(input("Enter the size of queue request: "))
+
+  	print("Enter the queue of disk position to be read: ")
+  	for i in range(size):
+    		queue.append(int(input()))
+  
+  	head = int(input("Enter the initial head position: "))
+  	queue.insert(0, head)
+
+  	seek = 0
+
+  	for j in range(size):
+    		diff = abs(queue[j+1] - queue[j])
+    		seek += diff
+    		print(f"Disk head moves from {queue[j]} to {queue[j+1]} with seek {diff}")
+
+  	print(f"Total seek time is {seek}")
+  	avg = seek / float(size)
+  	print(f"Average seek time is {avg}")
+
+if __name__ == "__main__":
+  	main()
+
+Output
+
+Enter the max range of disk: 200
+Enter the size of queue request: 4
+Enter the queue of disk position to be read: 
+55
+58
+39
+18
+Enter the initial head position: 50
+Disk head moves from 50 to 55 with seek 5
+Disk head moves from 55 to 58 with seek 3
+Disk head moves from 58 to 39 with seek 19
+Disk head moves from 39 to 18 with seek 21
+Total seek time is 48
+Average seek time is 12.0
+
+
+10.IMPLEMENT THE CONCEPT OF FILE ALLOCATION MECHANISM IN WINDOWS AND LINUX OPERATING SYSTEM
+Program
+# Implement the concept of File allocation mechanism in windows and linux
+Operating System
+def main():
+  	n = int(input("Enter no. of files: "))
+  	b = [0] * 20
+  	sb = [0] * 20
+  	t = [0] * 20
+  	c = [[0]*20 for _ in range(20)]
+
+  	for i in range(n):
+    		print(f"Enter no. of blocks occupied by file {i + 1}:", end = " ")
+    		b[i] = int(input())
+    		print(f"Enter the starting block of file {i+1}:", end =" ")
+    		sb[i] = int(input())
+    		t[i] = sb[i]
+    
+    	for j in range(b[i]):
+      		c[i][j] = sb[i]
+      		sb[i] += 1
+
+  	print("Filename \t Start block \t length")
+  	for i in range(n):
+    		print(f"{i +1} \t {t[i]} \t {b[i]}")
+
+  	x = int(input("Enter file name: "))
+ 	print(f"File name is: {x}")
+  	print(f"Length is: {b[x -1]}")
+  	print("Block occupied: ", end=" ")
+
+  	for i in range(b[x-1]):
+   		print(f"{c[x-1][i]:4}", end=" ")
+
+if __name__ == "__main__":
+  	main()
+
+Output
+Enter no. of files: 				3
+Enter no. of blocks occupied by file 1: 	4
+Enter the starting block of file 1: 		2
+Enter no. of blocks occupied by file 2: 	3
+Enter the starting block of file 2: 		5
+Enter no. of blocks occupied by file 3: 	2
+Enter the starting block of file 3: 		8
+Filename 	 Start block 	 length
+1 	 2 	 4
+2 	 5 	 3
+3 	 8 	 2
+Enter file name: 	2
+File name is: 		2
+Length is: 		3
+Block occupied:     5    6    7
