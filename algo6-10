@@ -1,0 +1,133 @@
+#Program 7: Memory Allocation Algorithm
+Aim:
+To implement the First Fit memory allocation algorithm in Python, which allocates processes
+to the memory blocks in the order they are provided. The First Fit algorithm searches for the
+first memory block that is large enough to accommodate a process.
+Algorithm:
+Step1: Initialize Allocation List:
+ Create an allocation list of size n (number of processes), initialized to -1. This list will
+store the block number assigned to each process. If a process is not allocated, it
+remains -1.
+Step 2: Memory Allocation (First Fit):
+ Loop through each process i (from 0 to n-1):
+
+For each process, loop through each memory block j (from 0 to m-1):
+ If the size of memory block blockSize[j] is greater than or equal to the
+size of the current process processSize[i], allocate this block to the
+process.
+ Assign allocation[i] = j (the index of the memory block).
+ Subtract the process size from the block size (blockSize[j] -=
+processSize[i]).
+ Break out of the inner loop as the process has been allocated.
+
+Step3: Display Results:
+ Print a header: &quot;Process No. Process Size Block no.&quot;
+ Loop through each process i and print:
+o Process number (i+1).
+o Process size (processSize[i]).
+o The allocated block number (allocation[i] + 1 if allocated, otherwise &quot;Not
+Allocated&quot;).
+
+
+#Program 8: Page Replacement Algorithm
+Aim:
+To implement the FIFO (First-In-First-Out) Page Replacement algorithm in Python. This
+algorithm replaces the oldest page in memory when a new page needs to be loaded, and there
+is no space available.
+Algorithm:
+1. Initialize Parameters:
+o Input the number of pages (n).
+o Input the reference string a (the sequence of page numbers).
+o Input the number of page frames (no).
+o Initialize the frame list to store the pages currently in memory, all set to -1.
+o Initialize j to 0 (pointer to the next frame to replace).
+o Initialize count to 0 to keep track of the number of page faults.
+2. Display Headers:
+o Print the header: &quot;Ref String Page Frames&quot; to show the reference string and
+the corresponding page frames.
+3. Process Each Page in the Reference String:
+o For each page a[i] in the reference string:
+1. Print the current page number a[i].
+2. Check if the page is already in one of the frames (avail is set to 1 if the
+page is found, otherwise it remains 0).
+3. If the page is not in any frame (avail == 0):
+ Replace the page at the position j in the frame with a[i].
+ Move the pointer j to the next frame using (j + 1) % no
+(circular replacement).
+ Increment the page fault count (count += 1).
+ Print the current state of all frames.
+
+4. Display Results:
+o After processing all pages, print the total number of page faults.
+
+#Program 9: disk scheduling algorithm
+
+Aim
+To calculate the total and average seek time for a disk scheduling request using a simple disk
+scheduling algorithm.
+Algorithm
+Step 1: Input Disk Information:
+
+o Take the maximum range of the disk.
+o Take the size of the disk queue requests.
+
+Step 2: Input Disk Queue Requests:
+
+o Accept the disk positions in the queue that need to be read.
+
+Step 3: Input Initial Head Position:
+
+o Take the initial position of the disk head.
+
+Step 4: Calculate Seek Time:
+
+o Initialize seek as 0 to store the total seek time.
+o Insert the initial head position at the start of the queue.
+o For each disk position in the queue (starting from the head), calculate the seek
+time by finding the absolute difference between the current and next disk
+positions.
+o Add the seek time to the total seek.
+Step 5: Print Movements and Seek Time:
+
+o Display the movement of the disk head from one position to another along
+with the seek time for each movement.
+Step 6: Calculate and Print Average Seek Time:
+
+o Compute the average seek time by dividing the total seek time by the number
+of requests.
+o Display the total and average seek time.
+
+#Program 10: Implement the concept of File allocation mechanism in windows and linux
+Operating System
+
+Aim
+To simulate the allocation of blocks to files in a simple file system and retrieve information
+about a specific file, including the blocks it occupies.
+Algorithm
+Step 1: Input the Number of Files:
+
+o Get the total number of files to be processed.
+
+Step 2: Initialize Data Structures:
+
+o Initialize arrays b to store the number of blocks each file occupies.
+o Initialize arrays sb and t to store the starting block of each file.
+o Initialize a 2D array c to store the block allocation for each file.
+
+Step 3: Input Block Information for Each File:
+
+o For each file:
+ Get the number of blocks it occupies.
+ Get the starting block number.
+ Store the starting block and allocate the blocks in the 2D array c.
+
+Step 4: Display File Allocation Table:
+
+o Print the file name, starting block, and length (number of blocks occupied) for
+each file.
+
+Step 5: Retrieve Information for a Specific File:
+
+o Get the file number for which information is requested.
+o Print the file name, length (number of blocks occupied), and the specific
+blocks occupied by the file.
