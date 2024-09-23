@@ -1,0 +1,29 @@
+mkdir 22107096
+ls
+cd 22107096/
+cat > file1.
+txt
+touch file2.txt
+cat > file2.txt
+cat > samp.doc
+rm samp.doc
+vi file3.txt
+cat file3.txt
+man ls
+ls
+pwd
+cp file1.txt copyfile.doc
+cat copyfile.doc
+mv copyfile.doc movefile.pdf
+ls
+mkdir smaple
+rmdir sample
+ls
+who
+wc -c file1.txt
+wc -w file1.txt
+grep Hello file1.txt
+wc –help
+date
+hostname
+cal dec 2021
