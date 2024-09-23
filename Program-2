@@ -1,3 +1,4 @@
+#DIRECTORIES AND FILE MANAGEMENT
 mkdir second_program
 cd second_program/
 touch text1.
