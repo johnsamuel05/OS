@@ -1,3 +1,4 @@
+#disk scheduling algorithm
 def scan_disk_scheduling(disk_size, queue_size, queue, initial_head_position):
     """
     Implements the SCAN disk scheduling algorithm.
