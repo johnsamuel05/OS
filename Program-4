@@ -1,0 +1,25 @@
+mkdir fourth_program
+pwd
+touch samp.txt main.sh
+cat > samp.txt
+vi main.sh
+
+echo "Pattern matching and string processing"
+echo "The character count in the file"
+wc -c samp.txt
+echo "The word count in the file"
+wc -w samp.txt
+echo "Combine two strings"
+str1="welcome"
+str2=" to OS Lab"
+str3=$str1+$str2
+str3+=" Study all Linux basic commands"
+echo "$str3"
+echo "Get substring of strings"
+sub="Learn Linux from Linux tutorial"
+substr=${sub:6:5}
+echo "$substr"
+echo "Using grep on another file"
+grep -c "to" samp.txt
+
+bash main.sh
