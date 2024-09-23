@@ -1,0 +1,21 @@
+mkdir second_program
+cd second_program/
+touch text1.
+txt text2.txt
+cat > text1.txt
+cp text1.txt text3.txt
+find ~/ -name text1.txt
+mkdir IT
+find ~/ -type d –name IT
+ls –l
+chmod u+rwx text1.txt
+ls –l
+chmod ugo+rwx text3.txt
+ls –l
+cat > text2.txt
+ln –s text2.txt swap.txt
+ls –l
+head swap.txt
+cat >> text2.txt
+cat text2.txt
+cat swap.txt
