@@ -1,0 +1,18 @@
+mkdir third_program
+cd third_program/
+cat > sort.
+txt
+sort sort.txt
+sort –r sort.txt
+sort –u sort.txt
+cat sort.txt | grep Naruto
+cat sort.txt | head
+cat sort.txt | wc
+cat sort.txt | wc > sort2.txt
+cat sort2.txt
+cut –c 1-3 file.txt
+cat sort.txt | grep Naruto
+cat sort.txt | head
+cat sort.txt | wc
+cat sort.txt | wc > count.txt
+cat count.txt
