@@ -1,3 +1,4 @@
+#FIRST COME FIRST SERVE SCHEDULING ALGORITHM
 def fcfs(processes):
     """
     Implements the First-Come-First-Served (FCFS) scheduling algorithm.
